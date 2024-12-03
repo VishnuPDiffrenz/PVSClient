@@ -1,4 +1,5 @@
 // import React from 'react';
+import { Link } from "react-router-dom";
 import pvsIcon from "../assets/pvsIcon.svg";
 import emailIcon from "../assets/mail-01.svg";
 import lockIcon from "../assets/square-lock-password.svg";
@@ -63,12 +64,14 @@ const LoginForm = () => {
          
           {/* Submit Button */}
           <div className="drop-shadow-md">
-            <button
-              type="submit"
-              className="w-full p-3 text-xs md:text-md  bg-gradient-to-b from-teal-400 to-teal-500 text-white font-bold rounded-lg hover:bg-blue-700 focus:ring focus:ring-blue-300 focus:outline-none hover:scale-95 duration-300 ease-in-out shadow-lg"
-            >
-              LOGIN
-            </button>
+            <Link to="/dashboard">
+              <button
+                type="submit"
+                className="w-full p-3 text-xs md:text-md  bg-gradient-to-b from-teal-400 to-teal-500 text-white font-bold rounded-lg hover:bg-blue-700 focus:ring focus:ring-blue-300 focus:outline-none hover:scale-95 duration-300 ease-in-out shadow-lg"
+              >
+                LOGIN
+              </button>
+            </Link>
           </div>
         </form>
 
