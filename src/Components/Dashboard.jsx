@@ -10,24 +10,24 @@ import bgImage from "../assets/pvsBg.jpg";
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-10 rounded-xl" style={{
+    <div className="flex flex-col items-center justify-center h-[100vh]" style={{
       backgroundImage: `url(${bgImage})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}>
       <div className="border border-slate-300 py-5 px-10 rounded-lg bg-white">
-      <header className="text-center mb-10">
+      <div className="text-center mb-10 pt-3 hover:scale-95 duration-300 ease-in-out">
         <img
           src={pvsIcon}
           alt="PVS Logo"
           className="h-10 mx-auto"
         />
-        <h1 className="text-xl font-semibold text-gray-700 mt-4">Welcome back, Mauro.</h1>
-      </header>
+        <h1 className="text-xl font-semibold text-gray-700 mt-4 hover:scale-95 duration-300 ease-in-out">Welcome back, Mauro.</h1>
+      </div>
 
       <div className="flex flex-col items-center">
         {/* User Dropdown */}
-        <div className="bg-[#EAFAFF] shadow-lg rounded-lg p-4 mb-6 flex items-center space-x-4">
+        <div className="bg-[#EAFAFF] shadow-lg rounded-lg p-4 mb-6 flex items-center space-x-4 hover:scale-95 duration-300 ease-in-out">
           <img
             src={profile} // Replace with actual avatar path
             alt="User Avatar"
@@ -44,7 +44,7 @@ const Dashboard = () => {
         </div>
 
         {/* Options */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-5 ">
           <OptionCard
             title="Sales"
             icon={salesIcon}
@@ -66,8 +66,8 @@ const Dashboard = () => {
 
 const OptionCard = ({ title, icon }) => {
   return (
-    <div className="bg-white rounded-lg px-8 py-5 text-center shadow-lg transition-shadow duration-200 border border-slate-300 mx-5">
-      <div className="text-4xl mb-4 item-center bg-gray-200 flex justify-center items-center rounded-full py-7">
+    <div className="bg-white rounded-lg px-8 py-5 text-center shadow-lg transition-shadow border border-slate-300 mx-5 hover:scale-95 duration-300 ease-in-out">
+      <div className="text-4xl mb-2 item-center bg-gray-200 flex justify-center items-center rounded-full py-7">
         <img src={icon} alt="Icon" className="w-10"/>
       </div>
       <h2 className="text-lg">{title}</h2>
