@@ -8,13 +8,11 @@ import bgImage from "../assets/pvsBg.jpg";
 
 const LoginForm = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-[#35C0C8]"
+    <div className="flex items-center justify-center h-[100vh] bg-gradient-to-r from-[#35C0C8] overflow-y-auto"
     style={{
       backgroundImage: `url(${bgImage})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
-      height: "100vh",
-      width: "100vw"
     }}>
       
       <div className="w-full max-w-md px-16 py-14 bg-white rounded-lg shadow-md">

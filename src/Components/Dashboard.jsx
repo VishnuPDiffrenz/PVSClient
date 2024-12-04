@@ -4,13 +4,21 @@ import profile from "../assets/profile.png";
 import salesIcon from "../assets/salesIcon.svg";
 import crmIcon from "../assets/crmIcon.svg";
 import settingsIcon from "../assets/settingsIcon.svg";
+import bgImage from "../assets/pvsBg.jpg";
+
+{/* <div className="flex flex-col items-center justify-center mx-[20vw] my-[10vh] border border-slate-200 py-10 rounded-xl"> */}
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col items-center justify-center mx-[20vw] my-[10vh] border border-slate-200 py-10 rounded-xl">
+    <div className="flex flex-col items-center justify-center py-10 rounded-xl" style={{
+      backgroundImage: `url(${bgImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}>
+      <div className="border border-slate-300 py-5 px-10 rounded-lg bg-white">
       <header className="text-center mb-10">
         <img
-          src={pvsIcon} // Replace with actual logo path
+          src={pvsIcon}
           alt="PVS Logo"
           className="h-10 mx-auto"
         />
@@ -36,7 +44,7 @@ const Dashboard = () => {
         </div>
 
         {/* Options */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
           <OptionCard
             title="Sales"
             icon={salesIcon}
@@ -51,14 +59,15 @@ const Dashboard = () => {
           />
         </div>
       </div>
+      </div>
     </div>
   );
 };
 
 const OptionCard = ({ title, icon }) => {
   return (
-    <div className="bg-white rounded-lg px-8 py-5 text-center shadow-lg transition-shadow duration-200 border border-slate-300 mr-5">
-      <div className="text-4xl mb-4 item-center bg-[#EAFAFF] flex justify-center items-center rounded-full py-7">
+    <div className="bg-white rounded-lg px-8 py-5 text-center shadow-lg transition-shadow duration-200 border border-slate-300 mx-5">
+      <div className="text-4xl mb-4 item-center bg-gray-200 flex justify-center items-center rounded-full py-7">
         <img src={icon} alt="Icon" className="w-10"/>
       </div>
       <h2 className="text-lg">{title}</h2>
