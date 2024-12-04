@@ -7,7 +7,7 @@ import settingsIcon from "../assets/settingsIcon.svg";
 
 const Dashboard = () => {
   return (
-    <div className="bg-gradient-to-b from-white to-blue-50 flex flex-col items-center justify-center mx-[20vw] my-[10vh] border border-slate-100 py-10">
+    <div className="flex flex-col items-center justify-center mx-[20vw] my-[10vh] border border-slate-200 py-10 rounded-xl">
       <header className="text-center mb-10">
         <img
           src={pvsIcon} // Replace with actual logo path
@@ -57,11 +57,11 @@ const Dashboard = () => {
 
 const OptionCard = ({ title, icon }) => {
   return (
-    <div className="bg-white shadow-md rounded-lg px-8 py-5 text-center hover:shadow-lg transition-shadow duration-200 border border-slate-300 mr-5">
+    <div className="bg-white rounded-lg px-8 py-5 text-center shadow-lg transition-shadow duration-200 border border-slate-300 mr-5">
       <div className="text-4xl mb-4 item-center bg-[#EAFAFF] flex justify-center items-center rounded-full py-7">
         <img src={icon} alt="Icon" className="w-10"/>
       </div>
-      <h2 className="text-lg font-medium">{title}</h2>
+      <h2 className="text-lg">{title}</h2>
       <button className="mt-4 px-6 py-2 bg-[#EAFAFF] text-[#00969F] hover:text-[#EAFAFF] rounded-md hover:bg-[#00969F] border border-[#00969F]">
         Open
       </button>
