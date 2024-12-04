@@ -10,24 +10,24 @@ import bgImage from "../assets/pvsBg.jpg";
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col items-center justify-center h-[100vh]" style={{
+    <div className="flex flex-col items-center justify-center h-[100vh] my-16 sm:my-auto " style={{
       backgroundImage: `url(${bgImage})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
     }}>
-      <div className="border border-slate-300 py-5 px-10 rounded-lg bg-white">
-      <div className="text-center mb-10 pt-3 hover:scale-95 duration-300 ease-in-out">
+      <div className="border border-slate-300 pb-6 px-10 rounded-lg bg-white mx-5">
+      <div className="text-center mb-2 pt-8">
         <img
           src={pvsIcon}
           alt="PVS Logo"
           className="h-10 mx-auto"
         />
-        <h1 className="text-xl font-semibold text-gray-700 mt-4 hover:scale-95 duration-300 ease-in-out">Welcome back, Mauro.</h1>
+        <h1 className="text-xl font-semibold text-gray-700 mt-4">Welcome back, Mauro.</h1>
       </div>
 
       <div className="flex flex-col items-center">
         {/* User Dropdown */}
-        <div className="bg-[#EAFAFF] shadow-lg rounded-lg p-4 mb-6 flex items-center space-x-4 hover:scale-95 duration-300 ease-in-out">
+        <div className="bg-[#EAFAFF] shadow-lg rounded-lg p-4 mb-6 flex items-center space-x-4">
           <img
             src={profile} // Replace with actual avatar path
             alt="User Avatar"
@@ -43,8 +43,14 @@ const Dashboard = () => {
           </select>
         </div>
 
+        <div className="mb-5 mt-5 flex items-center w-[50vw] sm:w-[50vw]">
+          <div className="bg-[#E4E4E4] h-[2px] w-full"></div>
+          <h1 className="bg-gray-100 px-5 py-1 border rounded-3xl text-xs w-[90vw] text-center">Choose your app</h1>
+          <div className="bg-[#E4E4E4] h-[2px] w-full"></div>
+        </div>
+
         {/* Options */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-5 ">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-5 sm:gap-5 sm:pb-8">
           <OptionCard
             title="Sales"
             icon={salesIcon}
@@ -66,16 +72,22 @@ const Dashboard = () => {
 
 const OptionCard = ({ title, icon }) => {
   return (
-    <div className="bg-white rounded-lg px-8 py-5 text-center shadow-lg transition-shadow border border-slate-300 mx-5 hover:scale-95 duration-300 ease-in-out">
-      <div className="text-4xl mb-2 item-center bg-gray-200 flex justify-center items-center rounded-full py-7">
-        <img src={icon} alt="Icon" className="w-10"/>
+    <div className="bg-white rounded-lg px-3 sm:px-5 py-5 text-center shadow-lg transition-shadow border border-slate-300 mx-5 hover:scale-95 duration-300 ease-in-out flex flex-col">
+      <div className="text-4xl mb-2 item-center bg-gray-200 flex justify-center items-center rounded-full px-3 py-3 sm:px-5 sm:py-5 max-w-[50%] sm:max-w-[75%] mx-auto">
+        <img src={icon} alt="Icon" className="w-7 sm:w-10"/>
       </div>
-      <h2 className="text-lg">{title}</h2>
-      <button className="mt-4 px-6 py-2 bg-[#EAFAFF] text-[#00969F] hover:text-[#EAFAFF] rounded-md hover:bg-[#00969F] border border-[#00969F]">
-        Open
-      </button>
+      <h2 className="text-md sm:text-lg">{title}</h2>
+      <div className="mt-3 sm:mt-4">
+        <button className="px-6 py-2 bg-[#EAFAFF] text-[#00969F] hover:text-[#EAFAFF] rounded-md hover:bg-[#00969F] duration-300 border border-[#00969F] text-md sm:text-lg">
+          Open
+        </button>
+      </div>
     </div>
   );
 };
 
 export default Dashboard;
+
+{/* <button className="mt-3 sm:mt-4  px-6 py-2 bg-[#EAFAFF] text-[#00969F] hover:text-[#EAFAFF] rounded-md hover:bg-[#00969F] border border-[#00969F] text-md sm:text-lg">
+        Open
+      </button> */}
